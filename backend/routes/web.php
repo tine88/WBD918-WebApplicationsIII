@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::delete('/post/{id}', function ($id) {
+   return \App\Post::destroy($id);
+});
