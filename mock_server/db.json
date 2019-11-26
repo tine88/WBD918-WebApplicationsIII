@@ -1,0 +1,12 @@
+{
+	"posts": [{
+			"title": "Blogpost #1"
+		},
+		{
+			"title": "Blogpost #2"
+		},
+		{
+			"title": "Blogpost #3"
+		}
+	]
+}
