@@ -4,6 +4,8 @@ import Home from "../views/Home.vue";
 import Blog from "../views/Blog.vue";
 import ComponentDemo from "../components/ComponentDemo";
 import ManagePosts from "../views/ManagePosts";
+import ShowDemo from "../views/ShowDemo";
+
 
 Vue.use(VueRouter);
 
@@ -21,13 +23,19 @@ const routes = [
   {
     path: '/manage-posts',
     name: 'manage-posts',
-    component: ManagePosts,
+    component: ManagePosts
   },
   {
     path: '/demo',
     name: 'demo',
     component: ComponentDemo
+  },
+  {
+    path: '/show-demo',
+    name: 'show-demo',
+    component: ShowDemo
   }
+
   // route level code-splitting
   // this generates a separate chunk (about.[hash].js) for this route
   // which is lazy-loaded when the route is visited.

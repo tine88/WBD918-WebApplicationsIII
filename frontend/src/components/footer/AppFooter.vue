@@ -1,6 +1,8 @@
 <template>
     <footer>
-        <p>Iam the Footer</p>
+        <div class="cell text-center">
+            <p>I am the Footer</p>
+        </div>
     </footer>
 </template>
 
@@ -10,6 +12,14 @@
     }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+    footer {
+        margin-top: 3rem;
+        padding: 1rem;
+        background-color: #e6e6e6;
 
+            p {
+                margin-bottom: 0;
+            }
+    }
 </style>

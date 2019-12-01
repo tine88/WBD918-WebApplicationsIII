@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="demo">
       <entry></entry>
   </div>
 </template>
@@ -9,7 +9,7 @@
 import Entry from "./archiv/Entry";
 export default {
   name: 'ComponentDemo',
-  components: {Entry},
+  components: {Entry}
 }
 </script>
 

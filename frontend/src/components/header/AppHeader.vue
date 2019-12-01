@@ -4,6 +4,8 @@
             <ul class="menu">
                 <router-link class="menu-text" :to="{name: 'home'}">Home</router-link>
                 <router-link class="menu-text" :to="{name: 'manage-posts'}">Manage Posts</router-link>
+                <router-link class="menu-text" :to="{name: 'show-demo'}">Show Demo</router-link>
+
             </ul>
         </div>
         <searchbar />
@@ -15,7 +17,9 @@
 
     export default {
         name: "AppHeader.vue",
-        components: {Searchbar}
+        components: {
+            Searchbar
+        }
     }
 </script>
 
