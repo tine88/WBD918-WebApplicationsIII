@@ -1,16 +1,18 @@
 <template>
-    <button type="button" class="alert button" @click="destroy">Delete</button>
+    <button type="button" class="alert button" @click="deletePost">Delete</button>
 </template>
 
 <script>
+    import {mapActions} from 'vuex';
+
     export default {
         name: "DeleteButton.vue",
         methods: {
-            destroy() {
-                axios.delete(`/${this.entity}/${this.id}`,)
-                    .then(result => {
-                        console.log(result)
-                    })
+            ...mapActions(['fetchPosts', 'destroyPost']),
+            deletePost() {
+                this.destroyPost(this.entity + "/" + this.id).then(data => {
+                    this.fetchPosts();
+                });
             }
         },
         props: {

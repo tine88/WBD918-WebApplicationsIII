@@ -3,7 +3,7 @@
         <p class="medium-2">id # {{id}}</p>
         <p class="medium-3">{{headline}}</p>
         <p class="medium-3">Author_id # {{author_id}}</p>
-        <delete-button entity="post" :id="id" class="medium-2" />
+        <delete-button entity="post" :id="id" class="medium-2"/>
         <edit-button class="medium-2" />
     </li>
 </template>
@@ -13,8 +13,11 @@
     import EditButton from './../../modules/EditButton';
 
     export default {
-        name: "ManagePostEntry",
         components: {DeleteButton, EditButton},
+        methods: {
+
+        },
+        name: "ManagePostEntry",
         props: {
             author_id: {
                 required: true,

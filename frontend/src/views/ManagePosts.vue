@@ -1,5 +1,6 @@
 <template>
     <div>
+        {{$store.state.test}}
         <manage-post-list />
     </div>
 </template>

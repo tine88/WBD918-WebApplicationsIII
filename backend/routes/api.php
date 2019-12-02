@@ -21,3 +21,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('/posts', function () {
     return \App\Post::all();
 });
+
+// TODO : static function?
+Route::delete('/post/{id}', function ($id) {
+    return \App\Post::destroy($id);
+});

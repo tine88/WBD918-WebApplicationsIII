@@ -8,34 +8,28 @@
                                :id="id"
                                :headline="headline"
                                :author_id="author_id"
-            />
 
+            />
         </ul>
     </div>
 </template>
 
 <script>
     import ManagePostEntry from "./ManagePostEntry";
+    import {mapState, mapActions} from 'vuex';
 
     export default {
-        name: "PostList",
-        data() {
-            return {
-                posts: null
-            }
+        computed: {
+            ...mapState(['posts'])
         },
         components: {ManagePostEntry},
         mounted() {
             this.fetchPosts();
         },
         methods: {
-            fetchPosts() {
-                axios.get('/posts').then(posts => {
-                    console.log(posts);
-                    this.posts = posts.data;
-                })
-            }
-        }
+            ...mapActions(['fetchPosts'])
+        },
+        name: "PostList",
     }
 
 </script>
